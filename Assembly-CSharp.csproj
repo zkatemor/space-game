@@ -58,8 +58,13 @@
      <Compile Include="Assets\ExplosionEffects\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
      <Compile Include="Assets\ExplosionEffects\WarFX\Scripts\WFX_LightFlicker.cs" />
      <Compile Include="Assets\ExplosionEffects\WarFX\Spawn System\CFX_SpawnSystem.cs" />
-     <Compile Include="Assets\PlayerScript.cs" />
-     <Compile Include="Assets\ShotScript.cs" />
+     <Compile Include="Assets\Scripts\AsteroidEmitterScript.cs" />
+     <Compile Include="Assets\Scripts\AsteroidScript.cs" />
+     <Compile Include="Assets\Scripts\BoundaryScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Scripts\Scroller.cs" />
+     <Compile Include="Assets\Scripts\ShotScript.cs" />
+     <Compile Include="Assets\Scripts\SmallShotScript.cs" />
      <None Include="Assets\ExplosionEffects\WarFX\Shaders\WFX_S AlphaBlend Scroll.shader" />
      <None Include="Assets\Procedural fire\Shaders\FireSphere.shader" />
      <None Include="Assets\Sounds\BackgroundMusic\ReadMe.txt" />
