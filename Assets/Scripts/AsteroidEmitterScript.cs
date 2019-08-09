@@ -9,15 +9,22 @@ public class AsteroidEmitterScript : MonoBehaviour
 
     private float nextSpawn;
 
+    private GameScript gameScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!gameScript.isStartedAlready())
+        {
+            return;
+        }
+
         if (Time.time > nextSpawn)
         {
             float yPosition = transform.position.y;

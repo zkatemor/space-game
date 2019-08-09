@@ -16,15 +16,23 @@ public class PlayerScript : MonoBehaviour
     public float shotDelay, smallShotDelay;
     private float nextShotTime, nextSmallShotTime;
 
+    private GameScript gameScript;
+
     // Start is called before the first frame update
     void Start()
     {
         ship = GetComponent<Rigidbody>();
+        gameScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!gameScript.isStartedAlready())
+        {
+            return;
+        }
+
         LazerSettings();
 
         float moveHorizontal = Input.GetAxis("Horizontal");

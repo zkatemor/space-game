@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\AsteroidEmitterScript.cs" />
      <Compile Include="Assets\Scripts\AsteroidScript.cs" />
      <Compile Include="Assets\Scripts\BoundaryScript.cs" />
+     <Compile Include="Assets\Scripts\GameScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\Scripts\Scroller.cs" />
      <Compile Include="Assets\Scripts\ShotScript.cs" />

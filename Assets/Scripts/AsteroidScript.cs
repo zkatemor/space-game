@@ -11,12 +11,16 @@ public class AsteroidScript : MonoBehaviour
 
     public GameObject asteroidExplosion, playerExplosion;
 
+    private GameScript gameScript;
+
     // Start is called before the first frame update
     void Start()
     {
         asteroid = GetComponent<Rigidbody>();
         asteroid.angularVelocity = Random.insideUnitSphere * rotationSpeed;
         asteroid.velocity = Vector3.back * Random.Range(minSpeed, maxSpeed);
+
+        gameScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameScript>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +35,10 @@ public class AsteroidScript : MonoBehaviour
         if (other.tag == "StarShip")
         {
             Instantiate(playerExplosion, other.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            gameScript.incScore(10);
         }
 
         Destroy(other.gameObject);
